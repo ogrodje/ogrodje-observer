@@ -1,0 +1,10 @@
+wheel
+django
+django-cors-headers
+django-admin
+scrapy
+dj-database-url
+psycopg[binary]
+scrapy
+requests
+confluent_kafka

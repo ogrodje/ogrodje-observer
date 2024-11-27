@@ -1,0 +1,32 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block extrastyle %}
+<style>
+    html, :root {
+        --primary: #e13e69;
+        /* --secondary: #8f3c4f;
+        --accent: #dcdcdc;
+        --primary-fg: #fff; */
+    }
+
+    #site-name {
+        line-height: 1.3;
+    }
+
+    #site-name a {
+        background-image: url("{% static 'ogrodje-logo-base.png' %}");
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: contain;
+        padding-left: 80px;
+        width: 50px;
+        overflow: hidden;
+        text-indent: -600px;
+        display: block;
+    }
+
+    #header {
+        padding: 14px 40px;
+    }
+</style>
+{% endblock %}

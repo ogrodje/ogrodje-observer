@@ -1,0 +1,20 @@
+services:
+  tttm:
+    restart: always
+    ports:
+      - "0.0.0.0:7778:7777"
+  pg:
+    restart: always
+    volumes:
+      - tttm-pg-db:/var/lib/postgresql/data
+
+  tournament:
+    restart: unless-stopped
+
+volumes:
+  tttm-pg-db:
+    driver: "local"
+    driver_opts:
+      type: none
+      device: /home/oto/Projects/tttm-pg-db/data
+      o: bind
